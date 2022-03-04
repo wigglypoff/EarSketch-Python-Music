@@ -1,0 +1,14 @@
+from earsketch import *
+ring1 = RD_WORLD_PERCUSSION_BASSWOODENTONE_3
+
+init()
+setTempo(120)
+#Function
+def myFunction(startMeasure, endMeasure):
+    fitMedia(ring1, 1, startMeasure, endMeasure)
+myFunction(1, 60)
+setEffect(1, DELAY, DELAY_TIME, 1, 1, 100, 5)
+for i in range(15, 61):
+    makeBeat(ring1, 2, i, "0--0-0-0-0")
+
+finish()
